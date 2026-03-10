@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prompt Maestro — Asistentes Virtuales con IA para Profesionales</title>
   <meta name="description" content="Automatiza la atención de tu consultorio, despacho o negocio con un asistente virtual inteligente en WhatsApp. Configurado para tu profesión.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://prompt-maestro.com/">
+  <meta property="og:title" content="Prompt Maestro — Asistentes Virtuales con IA para Profesionales">
+  <meta property="og:description" content="Automatiza la atención de tu consultorio con un asistente virtual inteligente en WhatsApp. Agenda citas, cobra anticipos y responde pacientes 24/7.">
+  <meta property="og:url" content="https://prompt-maestro.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Prompt Maestro — Asistentes Virtuales con IA">
+  <meta name="twitter:description" content="Automatiza tu consultorio con un asistente de WhatsApp que agenda citas, cobra y responde pacientes 24/7.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -207,6 +217,10 @@
     .v-btn-submit svg { width: 16px; height: 16px; }
     .v-form-legal { font-size: 0.72rem; color: var(--v-text-muted); text-align: center; margin-top: 14px; line-height: 1.5; }
     .v-form-legal a { color: var(--v-primary); }
+    .v-form-checkbox { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; text-align: left; }
+    .v-form-checkbox input[type="checkbox"] { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--v-primary); flex-shrink: 0; cursor: pointer; }
+    .v-form-checkbox label { font-size: 0.78rem; color: var(--v-text-muted); line-height: 1.5; cursor: pointer; }
+    .v-form-checkbox label a { color: var(--v-primary); text-decoration: underline; text-underline-offset: 2px; }
     .v-footer { background: var(--v-bg); border-top: 1px solid var(--v-border); padding: 32px 0; }
     .v-footer .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
     .v-footer-copy { font-size: 0.8rem; color: var(--v-text-muted); }
@@ -241,7 +255,7 @@
 </head>
 <body>
   <div class="page active" id="page-hub">
-    <nav class="hub-nav" id="hub-nav">
+    <nav class="hub-nav" id="hub-nav" role="navigation" aria-label="Navegación principal">
       <div class="container">
         <a href="#" class="logo"><div class="logo-mark">P</div><div class="logo-text">Prompt <span>Maestro</span></div></a>
         <ul class="hub-nav-links">
@@ -304,7 +318,7 @@
             <div class="process-steps">
               <div class="process-step"><span class="process-step-num">1</span><div><h4>Elige tu profesión</h4><p>Selecciona tu especialidad y llena un formulario con tus datos básicos.</p></div></div>
               <div class="process-step"><span class="process-step-num">2</span><div><h4>Entrevista con IA</h4><p>Nuestro agente te hace preguntas sobre tu práctica para personalizar tu asistente.</p></div></div>
-              <div class="process-step"><span class="process-step-num">3</span><div><h4>Prueba y aprueba</h4><p>Recibe un preview funcional. Pruébalo antes de pagar el resto.</p></div></div>
+              <div class="process-step"><span class="process-step-num">3</span><div><h4>Prueba y aprueba</h4><p>Recibe un preview funcional. Pruébalo antes de pagar el resto del setup.</p></div></div>
               <div class="process-step"><span class="process-step-num">4</span><div><h4>Tu asistente sale a producción</h4><p>Actívalo en WhatsApp y empieza a atender clientes de inmediato.</p></div></div>
             </div>
           </div>
@@ -320,13 +334,13 @@
     <footer class="hub-footer">
       <div class="container">
         <span class="hub-footer-copy">© 2026 Prompt Maestro. Todos los derechos reservados.</span>
-        <div class="hub-footer-links"><a href="#">Aviso de Privacidad</a><a href="#">Términos</a><a href="#">Contacto</a></div>
+        <div class="hub-footer-links"><a href="/privacidad.html">Aviso de Privacidad</a><a href="/terminos.html">Términos</a><a href="mailto:contacto@prompt-maestro.com">Contacto</a></div>
       </div>
     </footer>
   </div>
 
   <div class="page page-doctors" id="page-doctors">
-    <nav class="v-nav">
+    <nav class="v-nav" role="navigation" aria-label="Navegación médicos">
       <div class="container">
         <button class="v-back" onclick="showPage('hub')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Todas las profesiones</button>
         <div class="v-nav-logo"><div class="v-nav-logo-mark">P</div><span class="v-nav-logo-text">Prompt Maestro</span></div>
@@ -375,9 +389,9 @@
         <div class="v-pricing-grid">
           <div class="v-pricing-card reveal">
             <p class="v-pricing-tag">Configuración</p><h3>Setup de tu asistente</h3>
-            <div class="v-price">$8,000 <span class="v-price-suffix">MXN</span></div>
+            <div class="v-price">$3,200 <span class="v-price-suffix">MXN para iniciar</span></div>
             <p class="v-price-note">Pago único · Dividido en dos partes</p>
-            <ul><li><span class="ck">✓</span> Anticipo de $3,200 para iniciar</li><li><span class="ck">✓</span> Resto de $4,800 al aprobar preview</li><li><span class="ck">✓</span> Entrevista AI personalizada</li><li><span class="ck">✓</span> Integración con Google Calendar</li><li><span class="ck">✓</span> Preview funcional para probar</li></ul>
+            <ul><li><span class="ck">✓</span> Anticipo de $3,200 para iniciar configuración</li><li><span class="ck">✓</span> Resto del setup de $5,299 al aprobar preview ($4,800 + 1er mes)</li><li><span class="ck">✓</span> Después: $2,499/mes para mantener tu agente activo</li><li><span class="ck">✓</span> Entrevista AI + integración Calendar y Stripe</li><li><span class="ck">✓</span> Preview funcional — si no te convence, no pagas el resto del setup</li></ul>
           </div>
           <div class="v-pricing-card featured reveal">
             <p class="v-pricing-tag">Mensualidad</p><h3>Asistente activo 24/7</h3>
@@ -398,13 +412,13 @@
               <div class="v-form-trust-item"><div class="ico">🔒</div><span>Pago seguro con Stripe (tarjeta, OXXO o SPEI)</span></div>
               <div class="v-form-trust-item"><div class="ico">🛡️</div><span>Datos protegidos bajo LFPDPPP</span></div>
               <div class="v-form-trust-item"><div class="ico">⚡</div><span>Asistente listo en 3-5 días hábiles</span></div>
-              <div class="v-form-trust-item"><div class="ico">💸</div><span>Reembolso disponible si no estás satisfecho</span></div>
+              <div class="v-form-trust-item"><div class="ico">👁️</div><span>Preview antes del despliegue — si no te convence, no pagas el resto del setup</span></div>
             </div>
           </div>
           <div class="v-form-card reveal">
             <h3>Empieza a configurar tu asistente</h3>
             <p class="form-sub">Realiza el pago inicial y comienza la configuración de tu AI agent</p>
-            <form id="doctor-lead-form" novalidate>
+            <form id="doctor-lead-form" novalidate aria-label="Formulario de registro">
               <div class="v-form-group"><label for="d-nombre">Nombre completo *</label><input type="text" id="d-nombre" name="nombre" placeholder="Dr. Juan García" required></div>
               <div class="v-form-row">
                 <div class="v-form-group"><label for="d-email">Email *</label><input type="email" id="d-email" name="email" placeholder="doctor@ejemplo.com" required></div>
@@ -412,7 +426,11 @@
               </div>
               <button type="submit" class="v-btn-submit">Pagar anticipo y empezar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
             </form>
-            <p class="v-form-legal">Al continuar, aceptas nuestro <a href="#">Aviso de Privacidad</a>. Serás redirigido a Stripe para un pago seguro de $3,200 MXN.</p>
+            <p class="v-form-legal">Serás redirigido a Stripe para un pago seguro de $3,200 MXN.</p>
+            <div class="v-form-checkbox">
+              <input type="checkbox" id="legal-accept" required>
+              <label for="legal-accept">He leído y acepto el <a href="/privacidad.html" target="_blank">Aviso de Privacidad</a>, los <a href="/terminos.html" target="_blank">Términos y Condiciones</a> y la <a href="/reembolso.html" target="_blank">Política de Reembolso</a>.</label>
+            </div>
           </div>
         </div>
       </div>
@@ -420,7 +438,7 @@
     <footer class="v-footer">
       <div class="container">
         <span class="v-footer-copy">© 2026 Prompt Maestro. Todos los derechos reservados.</span>
-        <div class="v-footer-links"><a href="#">Aviso de Privacidad</a><a href="#">Términos</a><a href="#">Contacto</a></div>
+        <div class="v-footer-links"><a href="/privacidad.html">Aviso de Privacidad</a><a href="/terminos.html">Términos</a><a href="mailto:contacto@prompt-maestro.com">Contacto</a></div>
       </div>
     </footer>
   </div>
@@ -437,7 +455,7 @@
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     document.getElementById('doctor-lead-form').addEventListener('submit', async (e) => {
       e.preventDefault(); const form = e.target; const btn = form.querySelector('.v-btn-submit'); const original = btn.innerHTML;
-      let valid = true; form.querySelectorAll('[required]').forEach(f => { if (!f.value.trim()) { f.style.borderColor = '#e53e3e'; valid = false; } else { f.style.borderColor = ''; } }); if (!valid) return;
+      let valid = true; form.querySelectorAll('input[required]:not([type="checkbox"])').forEach(f => { if (!f.value.trim()) { f.style.borderColor = '#e53e3e'; valid = false; } else { f.style.borderColor = ''; } }); const checkbox = document.getElementById('legal-accept'); if (!checkbox.checked) { checkbox.parentElement.style.outline = '1px solid #e53e3e'; checkbox.parentElement.style.borderRadius = '6px'; checkbox.parentElement.style.padding = '8px'; valid = false; } else { checkbox.parentElement.style.outline = ''; checkbox.parentElement.style.padding = ''; } if (!valid) return;
       btn.innerHTML = 'Enviando...'; btn.disabled = true;
       const data = Object.fromEntries(new FormData(form)); data.profesion = 'medico';
       try {
